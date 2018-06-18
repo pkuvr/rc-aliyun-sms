@@ -1,0 +1,26 @@
+{
+  "name": "rc-aliyun-sms",
+  "version": "1.0.0",
+  "description": "rc-aliyun-sms is a nodejs sdk for aliyun sms service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --exit"
+  },
+  "keywords": [
+    "sms",
+    "aliyun",
+    "aliyun-sms",
+    "redis"
+  ],
+  "author": "Jian Jiang <jianzi0307@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ioredis": "^3.2.2",
+    "request": "^2.87.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
