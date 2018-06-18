@@ -23,7 +23,7 @@ npm i rc-aliyun-sms --save
 
 发送验证码
 
-```
+```javascript
 const RcAliyunSms = require('rc-aliyun-sms');
 
 let sms = new RcAliyunSms(
@@ -52,7 +52,7 @@ let sms = new RcAliyunSms(
 
 验证有效性
 
-```
+```javascript
 sms.validateSmsCode('手机号', '验证码', 场景ID)
         .then(res => {
           if (res) {
