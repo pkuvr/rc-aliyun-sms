@@ -23,6 +23,7 @@ describe('rc-aliyun-sms', function () {
    * 发送短信测试
    */
   it('#sendSmsCode()', function (done) {
+    this.timeout(3000);
     sms.sendSmsCode('18853002966', '领跑', 'SMS_137685871', '{code:"1234"}', 1)
       .then(res => {
         let o = JSON.parse(res);
