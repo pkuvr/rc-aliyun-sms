@@ -4,7 +4,7 @@
   "description": "rc-aliyun-sms is a nodejs sdk for aliyun sms service.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --exit"
+    "test": "./node_modules/.bin/mocha -u tdd --reporter spec --exit"
   },
   "keywords": [
     "sms",
