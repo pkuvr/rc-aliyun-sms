@@ -30,7 +30,10 @@ describe('rc-aliyun-sms', function () {
         assert.ok('OK', o.Code);
         done();
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err);
+        done();
+      });
   });
 
 
