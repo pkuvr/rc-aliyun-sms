@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/jianzi0307/rc-aliyun-sms.svg?branch=master)](https://travis-ci.com/jianzi0307/rc-aliyun-sms)
+
 # rc-aliyun-sms
 
 rc-aliyun-sms 是阿里云短信服务SDK，使用redis过期机制验证短信验证码有效性。
