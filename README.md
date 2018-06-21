@@ -40,7 +40,9 @@ let sms = new RcAliyunSms(
     }
   );
 
- sms.sendSmsCode('手机号', '签名', '短信模板ID', '{code:"1234"}', 场景ID)
+ let tplParams = JSON.stringify({code:"1234"});
+
+ sms.sendSmsCode('手机号', '签名', '短信模板ID', tplParams, 场景ID)
        .then(res => {
          let o = JSON.parse(res);
          if (o.Code === 'OK' ) {

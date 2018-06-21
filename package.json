@@ -1,6 +1,6 @@
 {
   "name": "rc-aliyun-sms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "rc-aliyun-sms is a nodejs sdk for aliyun sms service.",
   "main": "index.js",
   "scripts": {
