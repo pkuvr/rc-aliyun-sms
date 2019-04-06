@@ -14,7 +14,7 @@ describe('rc-aliyun-sms', function () {
       expire: 10,//1800,
       redis: {
         host: '127.0.0.1',
-        port: 6379
+        port: 63790
       }
     }
   );
