@@ -11,10 +11,10 @@ describe('rc-aliyun-sms', function () {
     accessKeyID,
     accessKeySecret,
     {
-      expire: 5,//1800,
+      expire: 10,//1800,
       redis: {
         host: '127.0.0.1',
-        port: 63790
+        port: 6379
       }
     }
   );
@@ -24,7 +24,7 @@ describe('rc-aliyun-sms', function () {
    */
   it('#sendSmsCode()', function (done) {
     this.timeout(3000);
-    sms.sendSmsCode('18853002966', '领跑', 'SMS_137685871', JSON.stringify({code: "1234"}), 1)
+    sms.sendSmsCode(18853002966, '领跑', 'SMS_137685871', JSON.stringify({code: 1234}), 1)
       .then(res => {
         let o = JSON.parse(res);
         assert.ok('OK', o.Code);
@@ -38,7 +38,7 @@ describe('rc-aliyun-sms', function () {
 
 
   it('#validateSmsCode()', function (done) {
-    sms.validateSmsCode('18853002966', '1234', 1)
+    sms.validateSmsCode(18853002966, '1234', 1)
       .then(res => {
         assert.ok(true, res);
         done();
@@ -49,7 +49,7 @@ describe('rc-aliyun-sms', function () {
   it('#validateSmsCode() invalid', function (done) {
     this.timeout(6000);
     setTimeout(function () {
-      sms.validateSmsCode('18853002966', '2346', 1)
+      sms.validateSmsCode('18853002966', '2324', 1)
         .then(res => {
           assert.ok(true, !res);
           done();
