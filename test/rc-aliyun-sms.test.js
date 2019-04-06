@@ -49,7 +49,7 @@ describe('rc-aliyun-sms', function () {
   it('#validateSmsCode() invalid', function (done) {
     this.timeout(6000);
     setTimeout(function () {
-      sms.validateSmsCode('18853002966', '1234', 1)
+      sms.validateSmsCode('18853002966', '2346', 1)
         .then(res => {
           assert.ok(true, !res);
           done();
